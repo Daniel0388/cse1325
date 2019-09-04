@@ -1,38 +1,42 @@
-
+#include <string>
+#include <cmath>
 
 class Line {
 
 	private:
 
-	double _x1
-	double _y1
-	double _x2
-	double _y2
+	double x1;
+	double y1;
+	double x2;
+	double y2;
 
 
 	public:
 	
-	Line(X1, Y1, X2, Y2) {
+	Line(double X1, double Y1, double X2, double Y2) {
 		x1 = X1;
 		y1 = Y1;
 		x2 = X2;
-		y2 = Y2
+		y2 = Y2;
 	}
 
 
-	string to_string() {
-		std::string str = "(" + x1 + "," + y1 + ")-(" + x2 + "," + y2 + ")"
+	std::string to_string() {
+		std::string str = "(" + std::to_string(x1) + "," + std::to_string(y1) + ")-(" + std::to_string(x2) + "," + std::to_string(y2) + ")";
 		return str;
 	}
 
 	
 	int length() {
-		int x = (x1-x2)*2;
-		int y = (y1-y2)*2;
-		int len = x+y;
-		return len;
+		double x = (x1-x2);
+		double y = (y1-y2);
+		double xsqr = x*x;
+		double ysqr = y*y;
+		double len = xsqr+ysqr;
+		double len2 = sqrt(len);
+		return len2;
 	}
 
 	
 
-}
+};
