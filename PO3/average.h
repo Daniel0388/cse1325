@@ -1,5 +1,6 @@
 #ifndef AVERAGE_H
 #define AVERAGE_H
+#include <iostream>
 
 class Average {
 
@@ -10,6 +11,9 @@ class Average {
 	public:
 	Average();
 	double getSum();
+	friend std::ostream& operator << (std::ostream& os, Average& ave);
+	friend std::istream& operator >> (std::istream& is, Average& ave);
+	double operator+=(double value);
 
 };
 
