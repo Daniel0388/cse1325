@@ -3,14 +3,21 @@
 
 Average::Average() { //constructor
 
-	double _sum = 0;
-	int _values = 0;
+	_sum = 0;
+	_values = 0;
 }
 
 
 double Average::getSum() { //return sum
 
 	return _sum;
+
+}
+
+
+int Average:: getValues() { //return values
+
+	return _values;
 
 }
 
@@ -27,6 +34,10 @@ std::istream& operator >> (std::istream& is, Average& ave) {
 
 
 double Average::operator += (double value) {
+
+	//_values++;
+	//_sum = _sum + value;
+	//return _sum
 
 }
 
