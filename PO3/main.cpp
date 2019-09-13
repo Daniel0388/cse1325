@@ -1,4 +1,5 @@
 #include <iostream>
+#include "average.h"
 
 
 void print(int input);
