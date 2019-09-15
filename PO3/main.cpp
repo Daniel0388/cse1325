@@ -1,8 +1,12 @@
+#include <cstdlib>
 #include <iostream>
 #include "average.h"
 
 
-void print(int input);
+void print(double sum, int val);
+double random(double min, double max);
+
+
 
 int main () {
 	
@@ -15,25 +19,22 @@ int y = avg.getValues();
 std::cout << "sum = " << x << " values = " << y << std::endl;
 	
 	while(input != 0){
-		print(avg.getSum());
+		print(avg.getSum(), avg.getValues());
 		std::cin >> input;
 
 		if(input == 1) {
 		std::cout << "Value?" << std::endl;
-		std::cin >> value;
+		std::cin >> avg;
 		//avg._values++;
 		//avg._sum = avg._sum + value;
 		std::cout << "_sum = " << avg.getSum() << std::endl;
 	
 		}
 		else if(input == 2) {
-	
+		
 		}
 		else if(input == 9) {
-	
-		}
-		else if(input == 9) {
-	
+		avg.reset();
 		}
 		else if(input == 0) {
 		std::cout << "The program will now exit.\n" << std::endl;
@@ -51,10 +52,11 @@ std::cout << "sum = " << x << " values = " << y << std::endl;
 
 }
 
-void print(int sum) {
+void print(double sum, int val) {
 	std::cout << "\t=========================" << std::endl;
 	std::cout << "\tMerely Average Calculator" << std::endl;
 	std::cout << "\t=========================" << std::endl;
+	std::cout << "The current count is " << val << std::endl;
 	std::cout << "The current average is " << sum << "\n" << std::endl;
 	std::cout << "1 - Enter a new value" << std::endl;
 	std::cout << "2 - Auto enter a random value" << std::endl;
@@ -63,3 +65,11 @@ void print(int sum) {
 	std::cout << "Command?" << std::endl;
 	return;
 }
+
+
+double random(double min, double max) {
+	double r;
+	r = (max - min) * ((double)rand() / (double)RAND_MAX) + min;
+	return r;
+}
+

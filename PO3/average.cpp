@@ -21,23 +21,30 @@ int Average:: getValues() { //return values
 
 }
 
+void Average::reset() {
+	_sum = 0;
+	_values = 0;
+}
 
-std::ostream& operator<<(std::ostream& os, Average& ave) {
+std::ostream& operator << (std::ostream& os, Average& ave) {
 
 
 }
 
 
-std::istream& operator >> (std::istream& is, Average& ave) {
+void operator >> (std::istream& input, Average& ave) {
+	std::cout << "start of >> function" << std::endl;
+ 	int num;
+	input >> num;
+	std::cout << "num = " << num << std::endl;
 
+	ave._sum = ave._sum + num;
+	ave._values++;
 }
 
 
-double Average::operator += (double value) {
-
-	//_values++;
-	//_sum = _sum + value;
-	//return _sum
+void Average::operator += (double value) {
+	
 
 }
 
