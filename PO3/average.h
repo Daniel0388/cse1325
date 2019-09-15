@@ -13,7 +13,7 @@ class Average {
 	double getSum();
 	int getValues();
 	void reset();
-	friend std::ostream& operator << (std::ostream& os, Average& ave);
+	friend std::ostream& operator << (std::ostream& output, Average& ave);
 	friend void operator >> (std::istream& is, Average& ave);
 	void operator+=(double value);
 

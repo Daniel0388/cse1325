@@ -3,7 +3,7 @@
 #include "average.h"
 
 
-void print(double sum, int val);
+void print(double sum, int val, Average avg);
 double random(double min, double max);
 
 
@@ -19,7 +19,7 @@ int y = avg.getValues();
 std::cout << "sum = " << x << " values = " << y << std::endl;
 	
 	while(input != 0){
-		print(avg.getSum(), avg.getValues());
+		print(avg.getSum(), avg.getValues(), avg);
 		std::cin >> input;
 
 		if(input == 1) {
@@ -52,12 +52,12 @@ std::cout << "sum = " << x << " values = " << y << std::endl;
 
 }
 
-void print(double sum, int val) {
+void print(double sum, int val, Average avg) {
 	std::cout << "\t=========================" << std::endl;
 	std::cout << "\tMerely Average Calculator" << std::endl;
 	std::cout << "\t=========================" << std::endl;
-	std::cout << "The current count is " << val << std::endl;
-	std::cout << "The current average is " << sum << "\n" << std::endl;
+	std::cout << "The current count is " << val << "  " << sum << std::endl;
+	std::cout << "The current average is " << avg << "\n" << std::endl;
 	std::cout << "1 - Enter a new value" << std::endl;
 	std::cout << "2 - Auto enter a random value" << std::endl;
 	std::cout << "9 - Clear the calculator" << std::endl;

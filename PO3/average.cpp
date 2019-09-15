@@ -26,9 +26,17 @@ void Average::reset() {
 	_values = 0;
 }
 
-std::ostream& operator << (std::ostream& os, Average& ave) {
-
-
+std::ostream& operator << (std::ostream& output, Average& ave) {
+	
+	double average = ave._sum / ave._values;
+	if (average > 0) {
+	output << average;
+	return output;
+	}
+	else {
+	output << "undefined";
+	return output;
+	}
 }
 
 
