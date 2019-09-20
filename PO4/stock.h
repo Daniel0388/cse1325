@@ -16,6 +16,7 @@ class Stock {
 	public:
 	Stock();
 	Stock(double weight);
+	double weight();
 	
 
 

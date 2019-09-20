@@ -13,7 +13,8 @@ int main() {
 	Stock s;
 	Coach c;
 	//double x = loco.power();
-	std::cout << "power is " << loco.power() <<std::endl;
+	std::cout << "power is " << loco.power() << std::endl;
+	std::cout << "weight of loco is " << loco.weight() << std::endl;
 	return 0;
 
 }

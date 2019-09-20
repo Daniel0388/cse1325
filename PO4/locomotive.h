@@ -1,7 +1,9 @@
 #ifndef LOCOMOTIVE_H
 #define LOCOMOTIVE_H
 
-class Locomotive {
+#include "stock.h"
+
+class Locomotive : public Stock {
 	
 	private:
 	double _power;
