@@ -5,12 +5,12 @@ class Coach {
 
 	private:
 	int _passengers;
-	double _weight;
+	double _weight; //THIS NEEDS TO BE REMOVED ONCE STOCK CLASS IS MADE
 
 	public:
-	Coach() : _weight{28000} {};
-	add_passengers(int _passengers);
-	double weight() <overide>;
+	Coach(); //constructor
+	void add_passengers(int _passengers);
+	double weight() /*override*/;
 
 };
 
