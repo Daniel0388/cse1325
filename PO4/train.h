@@ -13,7 +13,7 @@ class Train { //AGGREGATION LECTURE 7 SLIDE ~14
 
 	private:
 	std::vector <Locomotive*> _locomotives; //Locomotive* _locomotives;
-	std::vector <Coach*> _coaches;//Coach* _coaches;
+	std::vector <Coach*> _coaches; //Coach* _coaches;
 
 	public:
 	void add_locomotive(Locomotive& locomotive);
