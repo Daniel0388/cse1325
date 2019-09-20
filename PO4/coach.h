@@ -1,11 +1,13 @@
 #ifndef COACH_H
 #define COACH_H
 
-class Coach {
+#include "stock.h"
+
+class Coach : public Stock {
 
 	private:
 	int _passengers;
-	double _weight; //THIS NEEDS TO BE REMOVED ONCE STOCK CLASS IS MADE
+	//double _weight; //THIS NEEDS TO BE REMOVED ONCE STOCK CLASS IS MADE
 
 	public:
 	Coach(); //constructor

@@ -1,4 +1,5 @@
 
 #include "coach.h"
 
-Coach::Coach() : _weight{28000} {};
+
+Coach::Coach() : Stock(28000) {};
