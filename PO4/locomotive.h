@@ -10,7 +10,7 @@ class Locomotive : public Stock {
 
 
 	public:
-	Locomotive(); //constructor
+	Locomotive();
 	double power();
 	
 

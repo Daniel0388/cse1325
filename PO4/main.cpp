@@ -10,11 +10,15 @@ int main() {
 
 	std::cout << "hello world" << std::endl;
 	Locomotive loco;
-	Stock s;
-	Coach c;
+	Stock stock;
+	Coach coach;
 	//double x = loco.power();
 	std::cout << "power is " << loco.power() << std::endl;
+	std::cout << "weight of stock is " << stock.weight() << std::endl;
+	std::cout << "weight of coach is " << coach.weight() << std::endl;
 	std::cout << "weight of loco is " << loco.weight() << std::endl;
+	std::cout << "power of loco is " << loco.power() << std::endl;
+	
 	return 0;
 
 }
