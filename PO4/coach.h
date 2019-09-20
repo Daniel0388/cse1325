@@ -10,7 +10,7 @@ class Coach : public Stock {
 
 	public:
 	Coach();
-	void add_passengers(int _passengers);
+	int add_passengers(int passengers);
 	//double weight() /*override*/;
 
 };

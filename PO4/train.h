@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <cmath>
 
 #include "locomotive.h"
 #include "coach.h"
@@ -17,7 +18,7 @@ class Train { //AGGREGATION LECTURE 7 SLIDE ~14
 	public:
 	void add_locomotive(Locomotive& locomotive);
 	void add_coach(Coach& coach);
-	double speed(double minutes);
+	double speed(double minutes, std::vector <Locomotive*> _locomotives);
 	std::string to_art();
 
 };
