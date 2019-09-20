@@ -8,11 +8,9 @@ class Locomotive : public Stock {
 	private:
 	double _power;
 
-
 	public:
 	Locomotive();
-	double power();
-	
+	double power();	
 
 };
 

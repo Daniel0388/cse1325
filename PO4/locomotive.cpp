@@ -1,4 +1,3 @@
-
 #include "locomotive.h"
 
 Locomotive::Locomotive() : Stock(80000), _power{13500} {};

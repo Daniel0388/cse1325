@@ -1,6 +1,4 @@
-
 #include "stock.h"
-
 
 Stock::Stock() : _weight{NAN} {};
 
