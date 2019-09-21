@@ -10,11 +10,12 @@ void print();
 
 int main() {
 
+	int choice = -1;
+
 	Train train;
 	Locomotive loco;
 	Stock stock;
 	Coach coach;
-
 
 	train.add_locomotive(loco);
 
@@ -26,9 +27,30 @@ int main() {
 	std::cout << "power of loco is " << loco.power() << std::endl;
 	*/
 
-	print();
+	//START OF MENU SECTION
+	
 
-	return 0;
+	while (choice != 1 || choice != 2 || choice != 9 || choice != 0 ) {
+		print();
+		std::cin >> choice;
+		if (choice == 1) {
+			//DO THIS
+		}
+		else if (choice == 2) {
+			//DO THIS
+		}
+		else if (choice == 9) {
+			//DO THIS
+		}
+		else if (choice == 0) {
+			std::cout << "the program will now exit." << std::endl;
+			return 0;
+		}
+		else {
+		std::cout << "unreckognized input, please try again." << std::endl;
+		}
+		choice = -1;
+	};
 
 };
 
