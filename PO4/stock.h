@@ -3,6 +3,7 @@
 
 #include <string>
 #include <cmath>
+#include <vector>
 
 class Stock {
 
@@ -10,7 +11,7 @@ class Stock {
 	double _weight;
 	
 	protected:
-	std::string _art;
+	std::vector <std::string> _art;
 
 	public:
 	Stock();

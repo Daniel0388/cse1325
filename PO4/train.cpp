@@ -16,3 +16,9 @@ double speed(double minutes, std::vector <Locomotive*> _locomotives, std::vector
 	return result;
 
 };
+
+std::string to_art() {
+
+
+
+};
