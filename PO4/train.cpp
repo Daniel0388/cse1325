@@ -4,7 +4,7 @@ void Train::add_locomotive(Locomotive& locomotive) {_locomotives.push_back(&loco
 
 void Train::add_coach(Coach& coach) {_coaches.push_back(&coach);};
 
-double speed(double minutes, std::vector <Locomotive*> _locomotives, std::vector <Coach*> _coaches) {
+double Train::speed(double minutes, std::vector <Locomotive*> _locomotives, std::vector <Coach*> _coaches) {
 	
 	int i = 0;
 	double result = 0;
@@ -21,4 +21,16 @@ std::string to_art() {
 
 
 
+};
+
+// WORK IN PROGRESS
+
+int Train::size_loco() {
+	int x = _locomotives.size();
+	return x;
+};
+
+int Train::size_coach() {
+	int x = _coaches.size();
+	return x;
 };

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 #include "stock.h"
 #include "coach.h"
@@ -17,8 +18,6 @@ int main() {
 	Stock stock;
 	Coach coach;
 
-	train.add_locomotive(loco);
-
 	/*
 	std::cout << "power is " << loco.power() << std::endl;
 	std::cout << "weight of stock is " << stock.weight() << std::endl;
@@ -34,10 +33,12 @@ int main() {
 		print();
 		std::cin >> choice;
 		if (choice == 1) {
-			//DO THIS
+			train.add_locomotive(loco);
+			std::cout << "size of _locomotives is "  << train.size_loco() << std::endl;
 		}
 		else if (choice == 2) {
-			//DO THIS
+			train.add_coach(coach);
+			std::cout << "size of _coaches is " << train.size_coach() << std::endl;
 		}
 		else if (choice == 9) {
 			//DO THIS

@@ -18,8 +18,10 @@ class Train { //AGGREGATION LECTURE 7 SLIDE ~14
 	public:
 	void add_locomotive(Locomotive& locomotive);
 	void add_coach(Coach& coach);
-	double speed(double minutes, std::vector <Locomotive*> _locomotives);
+	double speed(double minutes, std::vector <Locomotive*> _locomotives, std::vector <Coach*> _coaches);
 	std::string to_art();
+	int size_loco(); // WORK IN PROGRESS
+	int size_coach();
 
 };
 
