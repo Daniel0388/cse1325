@@ -17,10 +17,7 @@ class Stock {
 	Stock();
 	Stock(double weight);
 	double weight();
-	
-	/*std::string artgetter() {
-		return _art;
-	}*/
+	std::string ascii_art(int row);
 
 };
 

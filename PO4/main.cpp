@@ -64,13 +64,15 @@ void print(Train train) {
 	std::cout << std::endl;
 
 	//code to print train goes here
-	//code to print train goes here
+	//std::cout << train.to_art() << std::endl; //UNCOMMENT THIS LINE ONCE FIXED
 	//code to print train goes here
 
 	std::cout << std::endl;
 	std::cout << "Minutes |\t1\t  5\t    15\t      30\t60" << std::endl;
 	std::cout << "--------|---------|---------|---------|---------|---------|" << std::endl;
+
 	std::cout << std::setprecision(4) << "Speed/s |" << std::setw(9) << train.speed(1) << "|" << std::setw(9) << train.speed(5) << "|" << std::setw(9) << train.speed(15) << "|" << std::setw(9) << train.speed(30) << "|" << std::setw(9) << train.speed(60) << "|" << std::setw(9) << std::endl;
+
 	std::cout << std::endl;
 	std::cout << "1 - Add a locomotive" << std::endl;
 	std::cout << "2 - Add an empty coach" << std::endl;

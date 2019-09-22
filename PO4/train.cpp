@@ -1,4 +1,7 @@
 #include "train.h"
+#include "stock.h"
+#include "locomotive.h"
+#include "coach.h"
 
 void Train::add_locomotive(Locomotive& locomotive) {_locomotives.push_back(&locomotive);};
 
@@ -18,13 +21,15 @@ double Train::speed(double minutes) {
 
 };
 
-std::string to_art() {
-
-
+/*
+std::string Train::to_art() { //WORK IN PROGRESS
+	if (_locomotives.size() > 0) {
+	return _locomotives.at(0).ascii_art(0);
+	}
 
 };
+*/
 
-// WORK IN PROGRESS
 
 int Train::size_loco() {
 	int x = _locomotives.size();
