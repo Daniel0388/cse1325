@@ -1,13 +1,14 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <iomanip>
 
 #include "stock.h"
 #include "coach.h"
 #include "locomotive.h"
 #include "train.h"
 
-void print();
+void print(Train train);
 
 int main() {
 
@@ -30,7 +31,7 @@ int main() {
 	
 
 	while (choice != 1 || choice != 2 || choice != 9 || choice != 0 ) {
-		print();
+		print(train);
 		std::cin >> choice;
 		if (choice == 1) {
 			train.add_locomotive(loco);
@@ -41,7 +42,7 @@ int main() {
 			std::cout << "size of _coaches is " << train.size_coach() << std::endl;
 		}
 		else if (choice == 9) {
-			//DO THIS
+			train.clear_train();
 		}
 		else if (choice == 0) {
 			std::cout << "the program will now exit." << std::endl;
@@ -55,7 +56,7 @@ int main() {
 
 };
 
-void print() {
+void print(Train train) {
 
 	std::cout << "\t=========================" << std::endl;
 	std::cout << "\t   The CSE1325 Express" << std::endl;
@@ -69,7 +70,7 @@ void print() {
 	std::cout << std::endl;
 	std::cout << "Minutes |\t1\t  5\t    15\t      30\t60" << std::endl;
 	std::cout << "--------|---------|---------|---------|---------|---------|" << std::endl;
-	std::cout << "Speed/s |---------|---------|---------|---------|---------|" << std::endl;
+	std::cout << std::setprecision(4) << "Speed/s |" << std::setw(9) << train.speed(1) << "|" << std::setw(9) << train.speed(5) << "|" << std::setw(9) << train.speed(15) << "|" << std::setw(9) << train.speed(30) << "|" << std::setw(9) << train.speed(60) << "|" << std::setw(9) << std::endl;
 	std::cout << std::endl;
 	std::cout << "1 - Add a locomotive" << std::endl;
 	std::cout << "2 - Add an empty coach" << std::endl;

@@ -4,15 +4,16 @@ void Train::add_locomotive(Locomotive& locomotive) {_locomotives.push_back(&loco
 
 void Train::add_coach(Coach& coach) {_coaches.push_back(&coach);};
 
-double Train::speed(double minutes, std::vector <Locomotive*> _locomotives, std::vector <Coach*> _coaches) {
+double Train::speed(double minutes) {
 	
-	int i = 0;
 	double result = 0;
 	double seconds = minutes * 60;
 	double power = 13500 * _locomotives.size();
-	double weight = (80000 * _locomotives.size()) + (28000 * _coaches.size());
-	
-	result = std::sqrt(2*power*seconds*weight);
+	double weight_loco = 80000 * _locomotives.size();
+	double weight_coach = 28000 * _coaches.size();
+	double weight = weight_loco + weight_coach;
+	double x = 2 * power * seconds / weight;
+	result = std::sqrt(x);
 	return result;
 
 };
@@ -33,4 +34,11 @@ int Train::size_loco() {
 int Train::size_coach() {
 	int x = _coaches.size();
 	return x;
+};
+
+void Train::clear_train() {
+	
+	_locomotives.clear();
+	_coaches.clear();
+	return;
 };
