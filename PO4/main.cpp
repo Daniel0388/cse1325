@@ -35,11 +35,11 @@ int main() {
 		std::cin >> choice;
 		if (choice == 1) {
 			train.add_locomotive(loco);
-			std::cout << "size of _locomotives is "  << train.size_loco() << std::endl;
+			//std::cout << "size of _locomotives is "  << train.size_loco() << std::endl;
 		}
 		else if (choice == 2) {
 			train.add_coach(coach);
-			std::cout << "size of _coaches is " << train.size_coach() << std::endl;
+			//std::cout << "size of _coaches is " << train.size_coach() << std::endl;
 		}
 		else if (choice == 9) {
 			train.clear_train();
